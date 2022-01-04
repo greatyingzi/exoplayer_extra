@@ -6,3 +6,14 @@ when first frame is not I-Frame/KeyFrame,ExoPlayer skip some P/B frame.
 
 用法
 使用CustomExtractorsFactory替换掉默认的DefaultExtractorsFactory。
+
+添加
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+引入依赖
+    implementation 'com.github.greatyingzi:exoplayer_extra:v1.0.3'
