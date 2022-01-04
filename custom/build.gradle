@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        minSdk 21
+        minSdk 16
         targetSdk 31
         versionCode 1
         versionName "1.0.0"
@@ -38,4 +38,14 @@ dependencies {
     //exoplayer
     implementation exo.exo_player
     implementation exo.exo_core
+}
+
+//打包main目录下代码和资源的 task
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+//配置需要上传到maven仓库的文件
+artifacts {
+    archives androidSourcesJar
 }
