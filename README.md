@@ -8,7 +8,7 @@ when first frame is not I-Frame/KeyFrame,ExoPlayer skip some P/B frame.
 ```
 startIndices[i] = 0;
 ```
-
+支持的exoplayer版本为2.14.2，其他版本未做测试。
 
 用法
 ```
